@@ -1,5 +1,14 @@
-Edad_de_Juan=int(input("Ingrese la edad de Juan: " ))
-Edad_de_Alberto=int(2/3 * Edad_de_Juan)
-Edad_de_Ana= int(Edad_de_Juan * 4/3)
-Edad_de_Mama= int(Edad_de_Juan + Edad_de_Alberto + Edad_de_Ana)
-print(f"La edad de cada uno es: Juan {Edad_de_Juan}, Alberto {Edad_de_Alberto}, Ana {Edad_de_Ana}, Mamá {Edad_de_Mama}")
+class Edades:
+    def __init__(self, edad_juan):
+        self.edad_juan = edad_juan
+        self.edad_alberto = int(2/3 * edad_juan)
+        self.edad_ana = int(4/3 * edad_juan)
+        self.edad_mama = self.edad_juan + self.edad_alberto + self.edad_ana
+
+    def mostrar(self):
+        print(f"Juan: {self.edad_juan}, Alberto: {self.edad_alberto}, Ana: {self.edad_ana}, Mamá: {self.edad_mama}")
+
+
+edad = int(input("Ingrese la edad de Juan: "))
+f = Edades(edad)
+f.mostrar()
