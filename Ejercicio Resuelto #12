@@ -1,0 +1,8 @@
+HorasT= 48
+PagoH= 5000
+ReteF= 0.125
+Salariobruto= HorasT*PagoH
+Retencion= Salariobruto*ReteF
+Salarioneto= Salariobruto-Retencion
+print(f"Salario bruto: {Salariobruto} Retencion en la fuente del 12.5%: {int(Retencion)} Salario neto:{int(Salarioneto)} ")
+
