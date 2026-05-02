@@ -1,0 +1,7 @@
+Sum= 0
+X= int(input("Ingrese un número entero:"))
+Sum= Sum + X
+Y= int(input("Ingrese otro número entero:"))
+X= X + (Y**2)
+Sum= Sum + (X/Y)
+print("El valor de la suma es:", Sum)
