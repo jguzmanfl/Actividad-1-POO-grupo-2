@@ -1,8 +1,17 @@
-HorasT= 48
-PagoH= 5000
-ReteF= 0.125
-Salariobruto= HorasT*PagoH
-Retencion= Salariobruto*ReteF
-Salarioneto= Salariobruto-Retencion
-print(f"Salario bruto: {Salariobruto} Retencion en la fuente del 12.5%: {int(Retencion)} Salario neto:{int(Salarioneto)} ")
+class Empleado:
+    def __init__(self, horas, pago_hora, retencion):
+        self.horas = horas
+        self.pago_hora = pago_hora
+        self.retencion = retencion
 
+    def calcular(self):
+        salario_bruto = self.horas * self.pago_hora
+        retencion_valor = salario_bruto * self.retencion
+        salario_neto = salario_bruto - retencion_valor
+        return salario_bruto, retencion_valor, salario_neto
+
+
+emp = Empleado(48, 5000, 0.125)
+bruto, ret, neto = emp.calcular()
+
+print(f"Salario bruto: {bruto}, Retención: {int(ret)}, Salario neto: {int(neto)}")
