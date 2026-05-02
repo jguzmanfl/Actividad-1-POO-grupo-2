@@ -1,0 +1,4 @@
+numero= float(input("Ingrese un número:"))
+numcuadrado= numero**2
+numcubo= numero**3
+print(f" El número es: {numero} \n Su cuadrado es:{numcuadrado} \n Su cubo es: {numcubo}")
