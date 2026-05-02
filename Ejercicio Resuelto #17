@@ -1,0 +1,6 @@
+import math
+radio=float(input("Ingrese el radio de un circulo: "))
+area= math.pi * radio**2
+diametro= 2*radio
+longitudcir= math.pi*diametro
+print(f"El área del círculo es:  {area:.2f} , La longitud de la circunferencia es: {longitudcir:.2f} ")
