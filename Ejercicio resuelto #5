@@ -1,7 +1,18 @@
-Sum= 0
-X= int(input("Ingrese un número entero:"))
-Sum= Sum + X
-Y= int(input("Ingrese otro número entero:"))
-X= X + (Y**2)
-Sum= Sum + (X/Y)
-print("El valor de la suma es:", Sum)
+class Operacion:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def calcular(self):
+        suma = 0
+        suma += self.x
+        self.x = self.x + (self.y ** 2)
+        suma += (self.x / self.y)
+        return suma
+
+
+x = int(input("Ingrese un número entero: "))
+y = int(input("Ingrese otro número entero: "))
+
+op = Operacion(x, y)
+print("El valor de la suma es:", op.calcular())
