@@ -1,4 +1,15 @@
-numero= float(input("Ingrese un número:"))
-numcuadrado= numero**2
-numcubo= numero**3
-print(f" El número es: {numero} \n Su cuadrado es: {numcuadrado} \n Su cubo es: {numcubo}")
+class Numero:
+    def __init__(self, numero):
+        self.numero = numero
+
+    def calcular(self):
+        cuadrado = self.numero ** 2
+        cubo = self.numero ** 3
+        return cuadrado, cubo
+
+
+num = float(input("Ingrese un número: "))
+n = Numero(num)
+
+cuad, cub = n.calcular()
+print(f"Número: {num}\nCuadrado: {cuad}\nCubo: {cub}")
